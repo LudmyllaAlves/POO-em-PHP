@@ -5,21 +5,22 @@
         <title> Aula 2</title>
     </head>
     <body>
-        <?php
-        require_once 'Caneta.php';
-        $c1 = new Caneta;
-        $c1->cor = "Azul";
-        $c1->ponta = 0.5;
-        $c1->tampar();
-        $c1->rabiscar();
-        print_r($c1);
+        <pre>
+            <?php
 
-        $c2 = new Caneta;
-        $c2->cor = "Verde";
-        $c2->ponta = 0.7;
-        $c2->destampar();
-        $c2->rabiscar();
-        print_r($c2);
-        ?>
+            require_once 'Caneta.php';
+            $c1 = new Caneta;
+            $c1->modelo = "Faber castell";
+            $c1->cor= "Verde";
+            //$c1->ponta = 0.7;
+            //$c1->carga = 99;
+            print_r($c1);
+            
+            $c1->destampar();
+            $c1->rabiscar();
+
+            
+            ?>
+        </pre>
     </body>
 </html>
