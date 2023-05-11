@@ -7,48 +7,20 @@
     <body>
         <pre>
             <?php
-            require_once 'Conta.php';
-            $p1 = new Conta;
-            $p2 = new conta;
-
-            $p1->nunConta = 1111;
-            $p1 ->abrirConta("CC");
-            $p1->setDono("Junior");
-
-            $p2->nunConta = 2222;
-            $p2->abrirConta("CP");
-            $p2->setDono("Maria");
-
-            $p1->depositar(300);
-            $p2->depositar(500);
-
-            $p2->sacar(900);
-
-            $p1->pagarMensal();
-            $p2->pagarMensal();
-
-            $p1->sacar(338);
-            $p1->fecharConta();
-            /*
-            require_once 'Caneta.php';
-            $c1 = new Caneta;
-            $c1->modelo = "Faber castell";
-            $c1->cor= "Verde";
-            //$c1->ponta = 0.7;
-            //$c1->carga = 99;
-            print_r($c1);
+            require_once "Lutador.php";
+            $l = array();
+            $l[0]= new Lutador("Jacquin", " França", 49, 1.68, 85.5, 27, 2, 1);
+            $l[1]= new Lutador("Feran", " Alemanha", 38, 1.78, 65.5, 25, 3, 2);
+            $l[2]= new Lutador("Jack", " Portugal", 28, 1.88, 53.5, 22, 5, 3);
+            $l[3]= new Lutador("VanGlog", " Brasil", 47, 1.75, 78.5, 20, 4, 6);
+            $l[4]= new Lutador("Van Diesel", " Italia", 34, 1.76, 64.5, 15, 15, 0);
+            $l[5]= new Lutador("Ariel", " Mexico", 45, 1.74, 96.5, 13, 14, 3);
             
-            $c1->destampar();
-            $c1->rabiscar();
-            
-            $c1->setModelo("BIC");
-            $c1->setPonta(0.5);
-            $c1 = new Caneta("JUMP", "Azul", 0.7);
-            $c2 = new Caneta("UP", "Rosa", 1.0);
-            print_r($c1);
-            print_r($c2);*/
-            print_r($p1);
-            print_r($p2);
+            $l[2]->setCategoria();
+            $l[4]->empatarLuta();
+            $l[0]->status();
+            $l[5]->apresentar();
+            $l[4]->status();
             ?>
         </pre>
     </body>
