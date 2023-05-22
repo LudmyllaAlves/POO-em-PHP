@@ -7,22 +7,31 @@
     <body>
         <pre>
             <?php
-                require_once "./Exercicio/Livro.php";
-                require_once "./Exercicio/Pessoa.php";
-                $p1 = new Pessoa("Sebose", 21, "Masculino");
-                $p2 = new Pessoa("Salome", 19, "Feminino");
-                $p3 = new Pessoa("Simone", 34, "Feminino");
-                $l= array();
-                $l[0]= new Livro("Quadrinhos", "Joana Dark", 350, $p1);
-                $l[1]=new Livro("Php", "Guarana Antartica", 100, $p2);
-                $l[2]= new Livro("Internacional", "Uvas Verdes", 230, $p3);
+            require_once "./Heranca/Aluno.php";
+            require_once "./Heranca/Pessoa.php";
+            require_once "./Heranca/Funcionario.php";
+            require_once "./Heranca/Professor.php";
+            $p1 = new Pessoa;
+            $p2 = new Aluno;
+            $p3 = new Professor;
+            $p4 = new Funcionario;
 
-                $l[0]->folear(81);
-                $l[0]->avancarPag();
-                $l[0]->avancarPag();
-                $l[0]->avancarPag();
-                $l[0]->voltarPag();
-                $l[0]->detalhes();
+            $p1->setNome("Miguel");
+            $p2->setNome("João");
+            $p3->setNome("Fernanda");
+            $p4->setNome("Maria");
+
+            $p2->setCurso("informatica");
+            $p3->setSalario(2500.75);
+            $p4->setSetor("Estoque");
+
+            $p3->receberAum(500.10);
+            $p4->mudarTrabalho();
+            $p2->cancelarMatr();
+            print_r($p1);
+            print_r($p2);
+            print_r($p3);
+            print_r($p4);
             ?>
         </pre>
     </body>

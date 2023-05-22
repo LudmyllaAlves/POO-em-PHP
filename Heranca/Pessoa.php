@@ -4,14 +4,6 @@ class Pessoa{
     private $idade;
     private $sexo;
 
-    public function __construct($n, $i, $s){
-        $this->setNome($n);
-        $this->setIdade($i);
-        $this->setSexo($s);
-    }
-        
-    
-
     public function getNome() {
         return $this->nome;
     }

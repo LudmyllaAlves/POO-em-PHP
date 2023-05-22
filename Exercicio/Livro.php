@@ -108,16 +108,25 @@ class Livro implements Publicações{
     }
     public function avancarPag(){
         if($this->aberto = true){
-            $this->setPagAtual($this->getPagAtual() + 1);
-            echo "<br>Pagina atual" . $this->getPagAtual();
+            if($this->getPagAtual() < $this->getTotalPag()){
+                $this->setPagAtual($this->getPagAtual() + 1);
+                echo "<br>Pagina atual" . $this->getPagAtual();
+            }else{
+                echo "<br>Você chegou ao fim...";
+            }
         }else{
             echo "O Livro está fechado";
         }
     }
     public function voltarPag(){
         if($this->aberto = true){
-            $this->setPagAtual($this->getPagAtual() - 1);
+            if($this->getPagAtual() > 1){
+                $this->setPagAtual($this->getPagAtual() - 1);
             echo "<br>Pagina atual" . $this->getPagAtual();
+            }else{
+                echo "Você está na primeira pagina";
+            }
+            
         }else{
             echo "O Livro está fechado";
         }
