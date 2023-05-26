@@ -1,10 +1,10 @@
 <?php
-class Pessoa{
+abstract class Pessoa{
     private $nome;
     private $idade;
     private $sexo;
 
-    public function getNome() {
+    public final function getNome() {
         return $this->nome;
     }
 
