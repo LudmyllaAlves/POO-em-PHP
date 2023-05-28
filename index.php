@@ -7,18 +7,27 @@
     <body>
         <pre>
             <?php
-            require_once "./Polimorfismo/Cachorro.php";
+            require_once "./ExercicioP2.php/Video.php";
+            require_once "./ExercicioP2.php/Gafanhoto.php";
+            require_once "./ExercicioP2.php/Visualizacao.php";
+            $v[0]= new Video("Ep.1");
+            $v[1]= new Video("Ep.2");
+            $v[2]= new Video("Ep.3");
+            $v[0]->play();
+            $v[0]->play();
+            $v[1]->like();
+            print_r($v);
 
-            $c = new Cachorro;
-            $c->reagirFrase("Olá");
-            $c->reagirHora(13,20);
-            $c->reagirDono(true);
-            $c->reagirIdade(12, 15.6);
+            $g[0]= new Gafanhoto("Junior", 15, "M", 15515);
+            $g[1]= new Gafanhoto("Maria", 19, "F", 54515);
+            print_r($g);
 
-            $c->reagirFrase("Vai deitar");
-            $c->reagirHora(23,20);
-            $c->reagirDono(true);
-            $c->reagirIdade(5, 11.6);
+            $vis[0] = new Visualizacao($g[0], $v[1]);
+            $vis[1] = new Visualizacao($g[0], $v[0]);
+            $vis[0]->avaliar();
+            $vis[1]->avaliarPorcento(80);
+            print_r( $vis);
+
 
             ?>
         </pre>
